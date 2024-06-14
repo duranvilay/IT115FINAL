@@ -3,12 +3,12 @@ import os
 import random
 from ec2_metadata import ec2_metadata 
 
-print(ec2_metadata.region)
-print(ec2_metadata.instance_id)
+#print(ec2_metadata.region)
+#print(ec2_metadata.instance_id)
 
 
 client = discord.Bot()
-token = str(os.getenv('MTI1MDgxNTg3OTMzMjEwMjI3Ng.GQp2zC.jfYA-xa_K40HVgRNGMQ5LJ-LNiwYcJsgleN-g4'))
+token = str(os.getenv('TOKEN'))
 
 
 @client.event #<--Fix
