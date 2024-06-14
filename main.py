@@ -3,13 +3,17 @@ import os
 import random
 from ec2_metadata import ec2_metadata 
 
-#print(ec2_metadata.region)
-#print(ec2_metadata.instance_id)
+load_dotenv() 
 
+intents = discord.Intents.default()
+intents.messages = True
+intents.message_content = True
 
-client = discord.Bot()
+client = discord.Client(intents=intents)
 token = str(os.getenv('TOKEN'))
 
+#print(ec2_metadata.region)
+#print(ec2_metadata.instance_id)
 
 @client.event #<--Fix
 async def on_ready():
@@ -44,5 +48,3 @@ async def on_message(message):
         
 
 client.run(token)
-BOT_TOKEN = MTI1MDgxNTg3OTMzMjEwMjI3Ng.GQp2zC.jfYA-xa_K40HVgRNGMQ5LJ-LNiwYcJsgleN-g4
-CHANNEL_ID = 1250820480831848459
